@@ -1,0 +1,13 @@
+<%- include('partials/header', { title: 'Portfolio' }) %>
+
+<section>
+  <h1>Portfolio</h1>
+  <p class="lead">Everything I've built so far. Each card links to the code, and to the live site when there is one.</p>
+  <div class="grid">
+    <% projects.forEach(function (project) { %>
+      <%- include('partials/project-card', { project: project }) %>
+    <% }) %>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

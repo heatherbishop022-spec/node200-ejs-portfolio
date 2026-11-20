@@ -1,0 +1,26 @@
+<%- include('partials/header', { title: 'Home' }) %>
+
+<section class="hero">
+  <p class="eyebrow"><%= profile.title %></p>
+  <h1>Hi, I'm <%= profile.name %>.</h1>
+  <p class="lead"><%= profile.tagline %></p>
+  <p><%= profile.about %></p>
+  <div class="actions">
+    <a class="btn" href="/contact">Get in touch</a>
+    <a class="btn btn-ghost" href="<%= profile.github %>" target="_blank" rel="noopener">My GitHub</a>
+  </div>
+</section>
+
+<section>
+  <div class="section-head">
+    <h2>Recent projects</h2>
+    <a href="/portfolio">See all &rarr;</a>
+  </div>
+  <div class="grid">
+    <% featured.forEach(function (project) { %>
+      <%- include('partials/project-card', { project: project }) %>
+    <% }) %>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

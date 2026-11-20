@@ -1,0 +1,12 @@
+  </main>
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <span>&copy; <%= new Date().getFullYear() %> <%= profile.name %></span>
+      <span>
+        <a href="<%= profile.github %>" target="_blank" rel="noopener">GitHub</a>
+        <% if (profile.email) { %> · <a href="mailto:<%= profile.email %>"><%= profile.email %></a><% } %>
+      </span>
+    </div>
+  </footer>
+</body>
+</html>

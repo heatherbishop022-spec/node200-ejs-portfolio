@@ -1,0 +1,34 @@
+<%- include('partials/header', { title: 'Contact' }) %>
+
+<section class="narrow">
+  <h1>Let's talk</h1>
+  <p class="lead">Leave your name, email, and a quick note, and I'll get back to you.</p>
+
+  <% if (error) { %>
+    <p class="alert" role="alert"><%= error %></p>
+  <% } %>
+
+  <form class="form" action="/thanks" method="POST">
+    <div class="row">
+      <div class="field">
+        <label for="firstName">First name</label>
+        <input id="firstName" name="firstName" type="text" required value="<%= contact.firstName || '' %>">
+      </div>
+      <div class="field">
+        <label for="lastName">Last name</label>
+        <input id="lastName" name="lastName" type="text" required value="<%= contact.lastName || '' %>">
+      </div>
+    </div>
+    <div class="field">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required value="<%= contact.email || '' %>">
+    </div>
+    <div class="field">
+      <label for="message">Message <span class="optional">(optional)</span></label>
+      <textarea id="message" name="message" rows="5" maxlength="1000" placeholder="What would you like to talk about?"><%= contact.message || '' %></textarea>
+    </div>
+    <button class="btn" type="submit">Send</button>
+  </form>
+</section>
+
+<%- include('partials/footer') %>

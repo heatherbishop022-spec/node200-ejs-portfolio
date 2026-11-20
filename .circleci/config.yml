@@ -1,0 +1,15 @@
+version: 2.1
+
+jobs:
+  test:
+    docker:
+      - image: cimg/node:lts
+    steps:
+      - checkout
+      - run: npm ci
+      - run: npm test
+
+workflows:
+  test:
+    jobs:
+      - test
