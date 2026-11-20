@@ -1,6 +1,13 @@
 
 module.exports = [
   {
+    name: 'Personal Portfolio',
+    description: 'This site. Built with Express and EJS templates, with a contact form that saves to Google Sheets.',
+    tech: ['Node', 'Express', 'EJS', 'Google Sheets API'],
+    repo: 'https://github.com/heatherbishop022-spec/node200-ejs-portfolio',
+    live: 'https://node200-ejs-portfolio-816i.onrender.com',
+  },
+  {
     name: 'Stardew Planner',
     description: 'A farm planning web app that shows real life weather and tasks, as well as in game information.',
     tech: ['React','Open-Meteo API','Stardew Valley Wiki','Nager.date'],
